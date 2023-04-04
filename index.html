@@ -1,92 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Survey Form</title>
-    <meta charset="UTF-8" />
-    <title>Fork Me! FCC: Test Suite Template</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
+<html>
+<head>
+  <title>Microverse Course Survey-Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
 
-  <body>
-    <h1 id="title">Survey Form</h1>
-    <p id="description">Please fill out the following survey:</p>
-    <form id="survey-form">
+<body>
+  <h1 id="title">freeCodeCamp Course Survey-Form</h1>
+  <p id="description">We appreciate you taking the time to help us improve our services.</p>
+
+<form id="survey-form">
+      <div>
       <label for="name" id="name-label">Name:</label>
-      <input type="text" id="name" placeholder="Enter your name" required />
+      <input type="text" id="name" placeholder="Enter Your Name" required>
+      </div>
 
+      <div>
       <label for="email" id="email-label">Email:</label>
-      <input type="email" id="email" placeholder="Enter your email" required />
+      <input type="email" id="email" placeholder="Enter Your Email" required>
+      </div>
 
-      <label for="number" id="number-label">Number:</label>
-      <input
-        type="number"
-        id="number"
-        placeholder="Enter a number between 1 and 100"
-        min="1"
-        max="100"
-        required />
+      <div>
+      <label for="number" id="number-label">Age:</label>
+      <input type="number" id="number" placeholder="Enter Age" min="18" max="100" required>
+      </div>
 
-      <label for="dropdown">Select an option:</label>
-      <select id="dropdown">
-        <option value="option1">Option 1</option>
-        <option value="option2">Option 2</option>
-      </select>
+ <div>
+  <label for="interests">Your Computer Science Interests Include:</label>
+  <select id="dropdown" name="interests" required>
+    <option value="" disabled selected>(Select Where Applicable)</option>
+    <option value="1">Computer Programming</option>
+    <option value="2">Computer Systems Analysis</option>
+    <option value="3">Database Administration</option>
+    <option value="4">Software Development</option>
+  </select>
+</div>
 
-      <fieldset>
-        <legend>Choose an option:</legend>
-        <label for="radio1">
-          <input
-            type="radio"
-            id="radio1"
-            name="radioGroup"
-            value="option1" />Option 1
-        </label>
-        <label for="radio2">
-          <input
-            type="radio"
-            id="radio2"
-            name="radioGroup"
-            value="option2" />Option 2
-        </label>
-      </fieldset>
+     <div>
+  <label>Reasons For Pursuing This Course:</label>
+</div>
 
-      <fieldset>
-        <legend>Choose one or more options:</legend>
-        <label for="checkbox1">
-          <input
-            type="checkbox"
-            id="checkbox1"
-            name="checkboxGroup"
-            value="option1" />Option 1
-        </label>
-        <label for="checkbox2">
-          <input
-            type="checkbox"
-            id="checkbox2"
-            name="checkboxGroup"
-            value="option2" />Option 2
-        </label>
-      </fieldset>
+<div>
+  <label><input type="radio" name="reasons" value="career switch/advancement"/>As A Career Switch/Advancement</label>
+</div>
+   
+<div>
+  <label><input type="radio" name="reasons" value="hobby"/>As A Hobby?</label>
+</div>
 
-      <label for="comments">Additional Comments:</label>
-      <textarea id="comments" placeholder="Enter your comments"></textarea>
+<div>
+  <label><input type="radio" name="reasons" value="learn a new skill"/>To Learn A New Skill?</label>
+</div>
+ 
+     
+     <div>
+  <label>Learning Outcomes & Expectations Include:</label>
+</div>
 
-      <button type="submit" id="submit">Submit</button>
+<div>
+  <input type="checkbox" name="outcomes" value="ai">
+  <label for="ai">Artificial Intelligence</label>
+  <br>
+  <input type="checkbox" name="outcomes" value="game-design">
+  <label for="game-design">Game Design</label>
+  <br>
+  <input type="checkbox" name="outcomes" value="networks">
+  <label for="networks">Networks</label>
+  <br>
+  <input type="checkbox" name="outcomes" value="information-management">
+  <label for="information-management">Information Management & Analytics</label>
+</div>
+
+    <div>
+  <label for="information">Additional Information:</label>
+  <br>
+  <textarea id="information" name="information" placeholder="Anything else?"></textarea>
+</div>
+
+<div>
+    <button type="submit" id="submit">Submit</button>
+      </div>
+
     </form>
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-
-    <!--
-
-    Hello Camper!
-
-    For now, the test suite only works in Chrome!
-    Please read the README below in the JS Editor before beginning.
-    Feel free to delete this message once you have read it.
-    Good luck and Happy Coding!
-
-    - The freeCodeCamp Team
-
-    -->
-    <script src="js/index.js"></script>
   </body>
-</html>
+</html
