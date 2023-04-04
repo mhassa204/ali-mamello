@@ -1,13 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Survey Form</title>
     <meta charset="UTF-8" />
     <title>Fork Me! FCC: Test Suite Template</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
-    <h1>hHello World, we are software developers!</h1>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Please fill out the following survey:</p>
+    <form id="survey-form">
+      <label for="name" id="name-label">Name:</label>
+      <input type="text" id="name" placeholder="Enter your name" required />
+
+      <label for="email" id="email-label">Email:</label>
+      <input type="email" id="email" placeholder="Enter your email" required />
+
+      <label for="number" id="number-label">Number:</label>
+      <input
+        type="number"
+        id="number"
+        placeholder="Enter a number between 1 and 100"
+        min="1"
+        max="100"
+        required />
+
+      <label for="dropdown">Select an option:</label>
+      <select id="dropdown">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+      </select>
+
+      <fieldset>
+        <legend>Choose an option:</legend>
+        <label for="radio1">
+          <input
+            type="radio"
+            id="radio1"
+            name="radioGroup"
+            value="option1" />Option 1
+        </label>
+        <label for="radio2">
+          <input
+            type="radio"
+            id="radio2"
+            name="radioGroup"
+            value="option2" />Option 2
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Choose one or more options:</legend>
+        <label for="checkbox1">
+          <input
+            type="checkbox"
+            id="checkbox1"
+            name="checkboxGroup"
+            value="option1" />Option 1
+        </label>
+        <label for="checkbox2">
+          <input
+            type="checkbox"
+            id="checkbox2"
+            name="checkboxGroup"
+            value="option2" />Option 2
+        </label>
+      </fieldset>
+
+      <label for="comments">Additional Comments:</label>
+      <textarea id="comments" placeholder="Enter your comments"></textarea>
+
+      <button type="submit" id="submit">Submit</button>
+    </form>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
     <!--
